@@ -1,0 +1,112 @@
+<!--
+
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="aName" type="text" class="validate" name="authorName" [(ngModel)]="authorName">
+        <label for="aName">Author Name</label>
+      </div>
+
+      <div class="input-field col s6">
+        <input id="bTitle" type="text" class="validate" name="blogTItle" [(ngModel)]="blogTitle">
+        <label for="bTitle">Blog Title</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="bContent" type="text" class="validate" name="blogContent" [(ngModel)]="blogContent">
+        <label for="bContent">Blog Content</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="bCategory" type="text" class="validate" name="blogCategory"[(ngModel)]="blogCategory">
+        <label for="bTitle">Blog Category</label>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="input-field col s1">
+        <button class="btn waves-effect waves-light" type="submit" (click)="onsubmit(blogTitle, blogContent, authorName, blogCategory)" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+  </form>
+
+-->
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">AuthorName</label>
+    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter author name" name="authorName" [(ngModel)]="authorName">
+    <small id="emailHelp" class="form-text text-muted">This will be your blog</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Title </label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Title goes here" name="blogTItle" [(ngModel)]="blogTitle">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Category </label>
+    <input type="text" class="form-control" id="blog category" placeholder="Category of blog" name="blogCategory" [(ngModel)]="blogCategory">
+  </div>
+  <!--<div class="form-group">
+    <label for="exampleSelect1">Example select</label>
+    <select class="form-control" id="exampleSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleSelect2">Example multiple select</label>
+    <select multiple class="form-control" id="exampleSelect2">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>-->
+  <div class="form-group">
+    <label for="exampleTextarea">Content</label>
+    <textarea class="form-control" id="exampleTextarea" rows="10" placeholder="White your content here" name="blogContent" [(ngModel)]="blogContent"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Choose your Logo</label>
+    <input type="file"  class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" >
+    <small id="fileHelp" class="form-text text-muted">This will be your blog's logo</small>
+  </div>
+ <!-- <fieldset class="form-group">
+    <legend>Radio buttons</legend>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Option one is this and that&mdash;be sure to include why it's great
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+        Option two can be something else and selecting it will deselect option one
+      </label>
+    </div>
+    <div class="form-check disabled">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+        Option three is disabled
+      </label>
+    </div>
+  </fieldset>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+      Check me out
+    </label>
+  </div>-->
+  <button type="submit" class="btn btn-primary" (click)="onsubmit(blogTitle, blogContent, authorName, blogCategory)">Publish</button>
+</form>
